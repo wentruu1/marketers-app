@@ -1,0 +1,5 @@
+<ul>
+    @for(post of postsService.getAllPosts(); track post.id){
+        <li>{{ post.name }}</li>
+    }
+</ul>
