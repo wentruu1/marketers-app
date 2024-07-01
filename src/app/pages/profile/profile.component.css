@@ -64,3 +64,12 @@ nav {
         max-width: 15%;
     }
 }
+
+.user-details-component {
+    /* background: linear-gradient(to bottom, #000000, #434343); /* Color de fondo */
+    padding: 20px; /* Espacio alrededor del contenido */
+    position: relative; /* Posicionamiento relativo para las cartas */
+    height: 500px; /* Ajustar según sea necesario */
+    overflow-y: auto; /* Añade desplazamiento vertical si es necesario */
+}
+
