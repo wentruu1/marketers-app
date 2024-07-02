@@ -1,1 +1,18 @@
-<p>item-details works!</p>
+<body>
+<div class="card mb-12" style="margin-top: 30px;">
+    <div class="row g-0">
+      <div class="col-md-5">
+        <img src="assets/Parrilla.jpg" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-7">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text"> 
+            name: {{ this.selectedItem?.name }} <br>
+            description: {{ this.selectedItem?.description }} <br>
+            price: {{ this.selectedItem?.price }} <br>
+        </div>
+      </div>
+    </div>
+</div>
+</body>

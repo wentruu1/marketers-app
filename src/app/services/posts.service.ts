@@ -7,7 +7,7 @@ import { Post } from '../models/post';
 export class PostsService {
   postsList: Post[] = [
     {
-      id: 1,
+      id: "1",
       name: "Silla Gamer",
       description: "Silla Gamer Casi Nueva",
       price: 35,
@@ -15,7 +15,7 @@ export class PostsService {
       
     },
     {
-      id: 2,
+      id: "2",
       name: "Television 40pulgadas",
       description: "Televisor LG 40 pulgadas Usado",
       price: 120,
@@ -27,13 +27,13 @@ export class PostsService {
   getAllPosts(): Post[] {
     return this.postsList
   }
-  getPostById(id: number) {
+  getPostById(id: string) {
     return this.postsList.find(post => post.id === id)!
   }
   addPost(post: Post) {
     this.postsList.push(post)
   }
-  removePost(id: number) {
+  removePost(id: string) {
     let postId = this.postsList.findIndex(p => p.id === id)
     this.postsList.splice(postId,1)
   }

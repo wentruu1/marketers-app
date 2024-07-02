@@ -1,0 +1,66 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #f0f0ed, #e6382a);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo para el contenedor principal */
+.container-fluid {
+    flex: 1;
+}
+
+
+
+nav {
+    background: #f0f0ed;
+}
+
+.footer {
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    color: #f0f0ed;
+}
+
+.dropdown-custom {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px;
+}
+
+.card-container {
+    margin-bottom: 5px; 
+    /* Separación inferior entre tarjetas */
+}
+
+/* Ajustar el espaciado de las columnas para el diseño de tarjetas */
+.card-column {
+    padding-left: 5px; /* Espacio a la izquierda de la tarjeta */
+    padding-right: 5px; /* Espacio a la derecha de la tarjeta */
+}
+
+/* Estilo personalizado para ajustar el ancho máximo de las tarjetas */
+.card {
+    max-width: 100%; /* Asegura que la tarjeta ocupe el ancho completo de su contenedor */
+}
+
+/* Ajustar el ancho máximo de las columnas en pantallas grandes */
+@media (min-width: 992px) { /* Para pantallas grandes (desktops) */
+    .card-column {
+        flex: 0 0 20%; /* 5 columnas en una fila (100% / 5) */
+        max-width: 20%;
+    }
+}
+
+@media (min-width: 1200px) { /* Para pantallas extra grandes (desktops grandes) */
+    .card-column {
+        flex: 0 0 15%; /* 6 columnas en una fila (100% / 6) */
+        max-width: 15%;
+    }
+}
