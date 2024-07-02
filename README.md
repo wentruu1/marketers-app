@@ -13,3 +13,7 @@ Ejecuta ng serve para iniciar el servidor de desarrollo. Navega a http://localho
 ## Compilación
 
 Ejecuta ng build para compilar el proyecto. Los artefactos de compilación se almacenarán en el directorio dist/.
+
+## Diseño
+
+Acceda al archivo Diseño.fig con Figma para ver el diseño de componentes de la aplicacion angular
