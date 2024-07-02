@@ -1,6 +1,10 @@
 # MarketersApp
 
 Este proyecto fue generado con Angular CLI versión 18.0.4.
+Colaboradores:
+Diego Mendoza
+Khristobal Riquelme
+Jorge Huentutripay
 
 ## Instalacion de dependencias
 
