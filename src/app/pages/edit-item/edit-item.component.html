@@ -1,0 +1,25 @@
+<body>
+    <form class="row g-3" style="margin-top: 50px; margin-left: 50px; margin-right: 50px; background-color: rgba(0, 0, 0, 0.1); border-radius: 10px;" [formGroup] = "editForm" (ngSubmit)="onSubmit()">
+      
+            <mat-form-field>
+                <mat-label >Nombre del producto</mat-label>
+                <input matInput formControlName="name">
+              </mat-form-field>
+    
+        <mat-form-field>
+            <mat-label >Descripción</mat-label>
+            <textarea matInput formControlName="desc"></textarea>
+          </mat-form-field>       
+      
+        <div class="col-md-1">  
+            <mat-form-field floatLabel="always">
+                <mat-label>Precio</mat-label>
+                <input matInput formControlName="price" type="number"/>
+                <span matTextPrefix>CLP&nbsp;</span>
+              </mat-form-field>
+        </div>   
+        <div class="col-12" style="margin-bottom: 25px;">
+            <button mat-raised-button type="submit" style="background: #4e4e4e;color: aliceblue;">Editar</button>
+        </div>
+    </form>
+    </body>

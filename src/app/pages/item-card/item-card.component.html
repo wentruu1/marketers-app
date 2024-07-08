@@ -1,8 +1,24 @@
-<div class="col-md-4 col-lg-3 card-column card-container">
-    <div class="card">
-        <img src="assets/Parrilla.jpg" class="card-img-top" alt="Parrilla">
-        <div class="card-body">
-            <p class="card-text"> {{item.name}}<br> {{ item.price}}<br> <a class="stretched-link" href="/p/{{item.id}}">Ver</a></p>
+
+<mat-card class="example-card" appearance="outlined">
+    <mat-card-header>
+       
+        <div mat-card-avatar>
+             <!-- Aquí va la foto de perfil del Vendedor -->
+
+          <img src="assets/Persona.jpg" width="35px" height="50px" alt="Mi Imagen">
         </div>
-    </div>
-</div>
+
+         <!-- Aquí nombre y Apellido del vendedor -->
+        <mat-card-title>Diego</mat-card-title>
+        <mat-card-subtitle>Mendoza</mat-card-subtitle>
+      </mat-card-header>
+  <img mat-card-xl-image src="assets/Parrilla.jpg" class="card-img-top" alt="Parrilla">
+  <mat-card-content>
+    <!-- Aquí va Nombre Y Precio del producto -->
+    <p class="card-text"> <br> {{item.name}}<br> {{ item.price}}<br>
+  </mat-card-content>
+  <mat-card-actions>
+      <!-- Link al producto -->
+    <button mat-button [routerLink]="['/p',item.id]">Ver</button>
+  </mat-card-actions>
+</mat-card>

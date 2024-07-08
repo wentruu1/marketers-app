@@ -11,7 +11,6 @@ export class PostsService {
       name: "Silla Gamer",
       description: "Silla Gamer Casi Nueva",
       price: 35,
-      isSaved: false
       
     },
     {
@@ -19,7 +18,6 @@ export class PostsService {
       name: "Television 40pulgadas",
       description: "Televisor LG 40 pulgadas Usado",
       price: 120,
-      isSaved: false
     }
   ]
   constructor() { }
@@ -32,6 +30,10 @@ export class PostsService {
   }
   addPost(post: Post) {
     this.postsList.push(post)
+  }
+  editPost(editedPost: Post) {
+    let indexToUpdate = this.postsList.findIndex(p => p.id === editedPost.id)
+    this.postsList[indexToUpdate] = editedPost
   }
   removePost(id: string) {
     let postId = this.postsList.findIndex(p => p.id === id)

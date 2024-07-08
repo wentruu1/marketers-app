@@ -1,33 +1,28 @@
-<div class="container-fluid">
-    <nav class="navbar navbar-expand-lg bg-body-tertiary position-relative">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Logo</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" routerLink="/">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" routerLink="/marketplace">Marketplace</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" routerLink="/publish">Publicar</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <!-- Dropdown -->
-        <div class="dropdown dropdown-custom">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                Opciones
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <li><a class="dropdown-item" routerLink="/profile">Perfil</a></li>
-                <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+
+<nav class="navbar navbar-expand-lg position-relative" style="background-color: #c2c1c1;" >
+    <div class="container-fluid">
+        <a mat-button routerLink="/" style="color: #e5421d;font-size: 22px;">Home</a>
+
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                <li class="nav-item">
+                    <a  mat-button style="color: #424141;" routerLink="/marketplace">Marketplace</a>
+                </li>
+                <li class="nav-item">
+                    <a  mat-button style="color: #424141;" routerLink="/publish">Publicar</a>
+                </li>
             </ul>
         </div>
-    </nav>
-  </div>
+    </div>
+    <!-- Dropdown -->
+    <button mat-button [matMenuTriggerFor]="menu" style="margin-right: 15px;font-size:20px;color: #e5421d;">{{ this.user }}</button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item routerLink="/profile">Perfil</button>
+        <button mat-menu-item routerLink="/">Cerrar sesión</button>
+      </mat-menu>
+</nav>

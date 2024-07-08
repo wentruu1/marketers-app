@@ -1,30 +1,23 @@
 <body>
-<form class="row g-3" style="margin-top: 50px; margin-left: 50px; margin-right: 50px; background: #ffffff; border-radius: 10px;">
-    <div class="mb-3">
-        <label for="formFile" class="form-label">Imagen</label>
-        <input class="form-control" type="file" id="formFile">
-    </div>    
-    <div class="col-md-6">
-        <label for="inputEmail4" class="form-label">Nombre Del Producto</label>
-        <input class="form-control" id="inputEmail4">
-    </div>
+    <form class="row g-3" style="margin-top: 50px; margin-left: 50px; margin-right: 50px; background-color: rgba(0, 0, 0, 0.1); border-radius: 10px;" [formGroup] = "publishForm" (ngSubmit)="onSubmit()">
+        <mat-form-field>
+            <mat-label >Nombre del producto</mat-label>
+            <input matInput formControlName="name">
+          </mat-form-field>
+
+        <mat-form-field>
+            <mat-label >Descripción</mat-label>
+            <textarea matInput formControlName="desc"></textarea>
+        </mat-form-field>       
     <div class="col-md-1">  
-        <label class="form-label">Precio</label> 
-        <input class="form-control" id="inputPrice">
-    </div>
-    <div class="mb-3">
-        <label for="exampleFormControlTextarea1" class="form-label">Descripción</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-    </div>        
-    <div class="col-md-2">  
-        <label for="inputState" class="form-label">Estado Del Producto</label>
-        <select id="inputState" class="form-select">
-            <option selected>Nuevo</option>
-            <option>Usado</option>
-        </select>
-    </div>      
+        <mat-form-field floatLabel="always">
+            <mat-label>Precio</mat-label>
+            <input matInput formControlName="price" type="number"/>
+            <span matTextPrefix>CLP&nbsp;</span>
+          </mat-form-field>
+    </div>   
     <div class="col-12" style="margin-bottom: 25px;">
-        <button type="submit" class="btn btn-primary" style="background: #4e4e4e;">Publicar</button>
+        <button mat-raised-button type="submit" style="background: #4e4e4e;color: aliceblue;">Publicar</button>
     </div>
-</form>
+    </form>
 </body>

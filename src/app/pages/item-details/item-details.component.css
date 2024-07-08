@@ -2,7 +2,7 @@ body, html {
     height: 100%;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom, #f0f0ed, #e6382a);
+    background:  #e5dedc;
     display: flex;
     flex-direction: column;
 }
@@ -12,7 +12,30 @@ body, html {
     flex: 1;
 }
 
+.buy-btn {
+    background-color: #e5421d;color: rgb(236, 229, 229); position: absolute;
+    bottom: 40px; /* Ajusta la distancia desde abajo según tus necesidades */
+    left: 50%; /* Centra horizontalmente el botón */
+    transform: translateX(-50%); /* Ajusta para centrar exactamente el botón */
+}
 
+.edit-btn {
+    background-color:  #817d7c;color: rgb(236, 229, 229); position: absolute;
+    bottom: 40px; /* Ajusta la distancia desde abajo según tus necesidades */
+    left: 56%; /* Centra horizontalmente el botón */
+    transform: translateX(-50%); /* Ajusta para centrar exactamente el botón */
+}
+
+.price-label {
+    position: absolute;
+    bottom: 80px; /* Ajusta la distancia desde abajo según tus necesidades */
+    left: 50%; /* Centra horizontalmente el botón */
+    transform: translateX(-50%); /* Ajusta para centrar exactamente el botón */
+}
+
+.hidden {
+    visibility: hidden;
+}
 
 nav {
     background: #f0f0ed;
