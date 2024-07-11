@@ -8,8 +8,8 @@
                  <!-- Aquí va la foto de perfil del Vendedor -->
     
               <img src="assets/Persona.jpg" width="150px" height="180px" alt="Mi Imagen" style="margin-right: 40px; margin-bottom: 10px;"> 
-              <mat-card-title style="font-weight: bolder;font-size: 30px;">Diego</mat-card-title>
-              <mat-card-subtitle style="font-weight: bolder;font-size: 30px;"> Mendoza</mat-card-subtitle>
+              <mat-card-title style="font-weight: bolder;font-size: 30px;">{{this.selectedItem.user}}</mat-card-title>
+
             </div>
     
              <!-- Aquí nombre y Apellido del vendedor -->
@@ -21,13 +21,14 @@
 
           <div class="card-body">
             <br>
-            <h5 class="card-title">{{ this.selectedItem?.name }}</h5>
+            <h5 class="card-title">{{ this.selectedItem.name }}</h5>
             <p class="card-text"> 
-              <p>{{ this.selectedItem?.description }} </p><br>
-              <h5 class="price-label">$ {{ this.selectedItem?.price }} CLP </h5>
+              <p>{{ this.selectedItem.description }} </p><br>
+              <h5 class="price-label">$ {{ this.selectedItem.price }} CLP </h5>
   
               <button mat-raised-button class="buy-btn">Comprar</button>
-              <button mat-raised-button [ngClass]="loggedIn? 'edit-btn':'hidden'" [routerLink]="['/edit',selectedItem?.id]">Editar</button>
+              <button mat-raised-button [ngClass]="(user === this.selectedItem.user) && this.loggedIn? 'edit-btn':'hidden'" [routerLink]="['/edit',selectedItem.id]">Editar</button>
+              <button mat-raised-button (click) = "deletePost()" [ngClass]="(user === this.selectedItem.user) && this.loggedIn? 'remove-btn':'hidden'" [routerLink]="['/marketplace']">Eliminar</button>
           </div>
         </div>
       </div>

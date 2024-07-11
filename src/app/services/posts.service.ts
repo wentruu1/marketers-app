@@ -11,6 +11,7 @@ export class PostsService {
       name: "Silla Gamer",
       description: "Silla Gamer Casi Nueva",
       price: 35,
+      user: "Diego Mendoza"
       
     },
     {
@@ -18,6 +19,7 @@ export class PostsService {
       name: "Television 40pulgadas",
       description: "Televisor LG 40 pulgadas Usado",
       price: 120,
+      user: "Diego Mendoza"
     }
   ]
   constructor() { }

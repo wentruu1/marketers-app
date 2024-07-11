@@ -8,6 +8,7 @@ import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } 
 import { PostsService } from '../../services/posts.service';
 import { Post } from '../../models/post';
 import { Router } from '@angular/router';
+import { UserService } from '../../services/user.service';
 @Component({
   selector: 'app-publish-item',
   standalone: true,
@@ -20,7 +21,8 @@ export class PublishItemComponent implements OnInit{
   
   constructor(private formBuilder: FormBuilder,
     private postsService: PostsService,
-    private router: Router
+    private router: Router,
+    private userService: UserService,
   ){
   }
 
@@ -37,7 +39,8 @@ export class PublishItemComponent implements OnInit{
       id: (this.postsService.getAllPosts().length + 1).toString(),
       name: this.publishForm.get("name")?.value,
       description: this.publishForm.get("desc")?.value,
-      price: this.publishForm.get("price")?.value
+      price: this.publishForm.get("price")?.value,
+      user: this.userService.getUser()
     }
     this.postsService.addPost(newPost)
     this.router.navigate(["/marketplace"])

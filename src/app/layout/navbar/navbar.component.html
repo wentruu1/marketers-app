@@ -13,16 +13,24 @@
                 <li class="nav-item">
                     <a  mat-button style="color: #424141;" routerLink="/marketplace">Marketplace</a>
                 </li>
-                <li class="nav-item">
-                    <a  mat-button style="color: #424141;" routerLink="/publish">Publicar</a>
-                </li>
+                @if(this.isLoggedIn){
+                    <li class="nav-item">
+                        <a  mat-button style="color: #424141;" routerLink="/publish">Publicar</a>
+                    </li>
+                }
             </ul>
         </div>
     </div>
     <!-- Dropdown -->
-    <button mat-button [matMenuTriggerFor]="menu" style="margin-right: 15px;font-size:20px;color: #e5421d;">{{ this.user }}</button>
-    <mat-menu #menu="matMenu">
-        <button mat-menu-item routerLink="/profile">Perfil</button>
-        <button mat-menu-item routerLink="/">Cerrar sesión</button>
-      </mat-menu>
+     @if(this.isLoggedIn){
+        <button mat-button [matMenuTriggerFor]="menu" style="margin-right: 15px;font-size:20px;color: #e5421d;">Diego Mendoza</button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item routerLink="/profile">Perfil</button>
+            <button mat-menu-item routerLink="/" (click) = "changeState()" >Cerrar sesión</button>
+          </mat-menu>
+     }
+     @else{
+        <button mat-button (click) = "changeState()" style="margin-right: 15px;font-size:20px;color: #e5421d;">Iniciar Sesion</button>
+     }
+    
 </nav>

@@ -46,6 +46,7 @@ export class EditItemComponent implements OnInit{
       name: this.editForm?.get("name")?.value,
       description: this.editForm?.get("desc")?.value,
       price: this.editForm?.get("price")?.value,
+      user: this.selectedItem.user,
     }
     this.postsService.editPost(editedItem)
     this.router.navigate(["/p",this.selectedItem.id])
